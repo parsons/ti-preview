@@ -5,7 +5,8 @@ permissions:
 
 on:
   release:
-    types: [created]
+    types: [published]
+  workflow_dispatch:
 
 jobs:
   publish-npm:
