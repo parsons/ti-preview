@@ -114,7 +114,7 @@ Currently only HTML and CSS are supported as languages.
 
 ## Examples
 
-See the [demo folder](https://github.com/typography-interaction-2425/ti-preview/tree/main/demo) for various examples of how to use this.
+See the [demo folder](./demo/) for various examples of how to use this.
 
 ## Development
 
