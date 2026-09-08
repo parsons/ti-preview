@@ -25,10 +25,12 @@ export class TiEditor extends LitElement {
 
 			.cm-scroller {
 				line-height: var(--editor-line-height);
+				scrollbar-width: var(--editor-scrollbar-width);
 
 				.cm-content {
 					font-family: var(--editor-font-family);
 					padding: var(--editor-padding);
+					text-box: var(--editor-text-box);
 
 					.cm-line {
 						color: var(--syntax-text);
@@ -140,7 +142,6 @@ export class TiEditor extends LitElement {
 
 						.cm-highlightSpace,
 						.cm-highlightTab {
-							background-image: none;
 							position: relative;
 
 							&::before {
@@ -150,8 +151,17 @@ export class TiEditor extends LitElement {
 							}
 						}
 
-						.cm-highlightSpace::before { content: var(--syntax-whitespace-space, '•'); }
-						.cm-highlightTab::before { content: var(--syntax-whitespace-tab, '⇥'); }
+						.cm-highlightSpace {
+							background: var(--syntax-whitespace-space-background);
+
+							&::before { content: var(--syntax-whitespace-space, '•'); }
+						}
+
+						.cm-highlightTab {
+							background: var(--syntax-whitespace-tab-background);
+
+							&::before { content: var(--syntax-whitespace-tab, '⇥'); }
+						}
 					}
 				}
 

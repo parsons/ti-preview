@@ -83,12 +83,12 @@ export class TiPreview extends LitElement {
 			height: 100%;
 
 			/* Type rendering. */
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: var(--container-moz-font-smoothing, grayscale);
+			-webkit-font-smoothing: var(--container-webkit-font-smoothing, antialiased);
 			-webkit-text-size-adjust: none;
 			font-kerning: normal;
-			font-smooth: always;
-			text-rendering: optimizeLegibility;
+			font-smooth: var(--container-font-smooth, always);
+			text-rendering: var(--container-text-rendering, optimizeLegibility);
 		}
 
 		.code {
