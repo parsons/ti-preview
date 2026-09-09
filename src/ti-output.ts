@@ -7,11 +7,18 @@ import { classMap } from "lit/directives/class-map.js";
 export class TiOutput extends LitElement {
 	static override styles = css`
 		:host {
-			display: block;
-			border: var(--output-border);
-			border-left: 0;
-			position: relative;
 			background: var(--output-background);
+			border: var(--output-border);
+			border-bottom: var(--output-border-bottom, var(--output-border));
+			border-left: var(--output-border-left, var(--output-border,));
+			border-right: var(--output-border-right, var(--output-border));
+			border-top: var(--output-border-top, var(--output-border));
+			box-shadow: var(--output-box-shadow);
+			box-sizing: border-box;
+			display: block;
+			margin: var(--output-margin);
+			padding: var(--output-padding);
+			position: relative;
 		}
 
 		iframe {

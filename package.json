@@ -1,6 +1,6 @@
 {
 	"name": "@parsons/ti-preview",
-	"version": "0.0.37",
+	"version": "0.0.38",
 	"description": "Mini HTML/CSS editor / preview for the Typography & Interaction class at Parsons",
 	"author": "Rijk van Zanten <rijkvanzanten@me.com>",
 	"license": "MIT",
