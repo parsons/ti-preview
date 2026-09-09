@@ -17,6 +17,10 @@ export class TiTabs extends LitElement {
 			backdrop-filter: var(--tab-bar-filter);
 			background: var(--tab-bar-nav-background, var(--tab-bar-background));
 			border: var(--tab-bar-nav-border);
+			border-bottom: var(--tab-bar-nav-border-bottom);
+			border-left: var(--tab-bar-nav-border-left);
+			border-right: var(--tab-bar-nav-border-right);
+			border-top: var(--tab-bar-nav-border-top);
 			box-shadow: var(--tab-bar-nav-box-shadow);
 			display: flex;
 			margin: var(--tab-bar-margin);
@@ -27,6 +31,10 @@ export class TiTabs extends LitElement {
 		a {
 			background: var(--tab-bar-background);
 			border: var(--tab-bar-border);
+			border-bottom: var(--tab-bar-border-bottom);
+			border-left: var(--tab-bar-border-left);
+			border-right: var(--tab-bar-border-right);
+			border-top: var(--tab-bar-border-top);
 			box-shadow: var(--tab-bar-box-shadow);
 			color: var(--tab-bar-foreground);
 			font-family: var(--tab-bar-font-family);
@@ -45,6 +53,10 @@ export class TiTabs extends LitElement {
 			&.active {
 				background: var(--tab-bar-active-background);
 				border: var(--tab-bar-active-border);
+				border-bottom: var(--tab-bar-active-border-bottom);
+				border-left: var(--tab-bar-active-border-left);
+				border-right: var(--tab-bar-active-border-right);
+				border-top: var(--tab-bar-active-border-top);
 				box-shadow: var(--tab-bar-active-box-shadow);
 				color: var(--tab-bar-active-foreground);
 				font-weight: var(--tab-bar-active-weight);
