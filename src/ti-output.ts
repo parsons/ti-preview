@@ -25,6 +25,12 @@ export class TiOutput extends LitElement {
 		p {
 			backdrop-filter: var(--output-dimensions-backdrop, blur(5px));
 			background: var(--output-dimensions-background, #ffffffaa);
+			border: var(--output-dimensions-border);
+			border-bottom: var(--output-dimensions-border-bottom, var(--output-dimensions-border));
+			border-left: var(--output-dimensions-border-left, var(--output-dimensions-border));
+			border-right: var(--output-dimensions-border-right, var(--output-dimensions-border));
+			border-top: var(--output-dimensions-border-top, var(--output-dimensions-border));
+			box-shadow: var(--output-dimensions-box-shadow);
 			font-family: var(--output-dimensions-font-family, var(--editor-font-family));
 			font-size: var(--output-dimensions-font-size, 12px);
 			font-variant-numeric: tabular-nums;
@@ -32,6 +38,7 @@ export class TiOutput extends LitElement {
 			margin: 0;
 			padding: var(--output-dimensions-padding, 3px 5px);
 			position: absolute;
+			text-box: var(--output-dimensions-text-box);
 
 			&.hidden {
 				animation: fade-out 200ms forwards;
