@@ -15,7 +15,9 @@ export class TiTabs extends LitElement {
 		nav {
 			-webkit-backdrop-filter: var(--tab-bar-filter);
 			backdrop-filter: var(--tab-bar-filter);
-			background: var(--tab-bar-background);
+			background: var(--tab-bar-nav-background, var(--tab-bar-background));
+			border: var(--tab-bar-nav-border);
+			box-shadow: var(--tab-bar-nav-box-shadow);
 			display: flex;
 			margin: var(--tab-bar-margin);
 
@@ -23,19 +25,27 @@ export class TiTabs extends LitElement {
 		}
 
 		a {
+			background: var(--tab-bar-background);
+			border: var(--tab-bar-border);
+			box-shadow: var(--tab-bar-box-shadow);
 			color: var(--tab-bar-foreground);
 			font-family: var(--tab-bar-font-family);
 			font-size: var(--tab-bar-font-size);
 			margin: 0;
 			padding: var(--tab-bar-padding);
 			position: relative;
+			text-box: var(--tab-bar-text-box);
 			text-decoration: none;
 
-			&:hover, &.active {
-				background: var(--tab-bar-active-background);
+			&:hover {
+				background: var(--tab-bar-hover-background);
+				color: var(--tab-bar-hover-foreground);
 			}
 
 			&.active {
+				background: var(--tab-bar-active-background);
+				border: var(--tab-bar-active-border);
+				box-shadow: var(--tab-bar-active-box-shadow);
 				color: var(--tab-bar-active-foreground);
 				font-weight: var(--tab-bar-active-weight);
 			}

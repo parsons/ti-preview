@@ -23,16 +23,15 @@ export class TiOutput extends LitElement {
 		}
 
 		p {
-			position: absolute;
-			margin: 0;
-			inset-inline-start: 4px;
-			inset-block-end: 4px;
-			font-family: var(--editor-font-family);
+			backdrop-filter: var(--output-dimensions-backdrop, blur(5px));
+			background: var(--output-dimensions-background, #ffffffaa)
+			font-family: var(--output-dimensions-font-family, var(--editor-font-family);
+			font-size: var(--output-dimensions-font-size, 12px);
 			font-variant-numeric: tabular-nums;
-			font-size: 12px;
-			background-color: #ffffffaa;
-			backdrop-filter: blur(5px);
-			padding: 3px 5px;
+			inset: var(--output-dimensions-inset, 0 0 4px 4px);
+			margin: 0;
+			padding: var(--output-dimensions-padding, 3px 5px);
+			position: absolute;
 
 			&.hidden {
 				animation: fade-out 200ms forwards;
