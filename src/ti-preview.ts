@@ -93,11 +93,11 @@ export class TiPreview extends LitElement {
 
 		.code {
 			background: var(--editor-background);
+			border: var(--editor-border);
 			border-bottom: var(--editor-border-bottom, var(--editor-border));
 			border-left: var(--editor-border-left, var(--editor-border));
 			border-right: var(--editor-border-right, var(--editor-border));
 			border-top: var(--editor-border-top, var(--editor-border));
-			border: var(--editor-border);
 			box-shadow: var(--editor-box-shadow);
 			box-sizing: border-box;
 			display: flex;
