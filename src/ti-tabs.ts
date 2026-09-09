@@ -23,6 +23,8 @@ export class TiTabs extends LitElement {
 			border-top: var(--tab-bar-nav-border-top, var(--tab-bar-nav-border));
 			box-shadow: var(--tab-bar-nav-box-shadow);
 			display: flex;
+			inline-size: var(--tab-bar-inline, auto);
+			justify-self: var(--tab-bar-justify, stretch);
 			margin: var(--tab-bar-margin);
 
 			&:has(a:only-child) { display: none }

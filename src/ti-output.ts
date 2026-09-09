@@ -24,7 +24,7 @@ export class TiOutput extends LitElement {
 
 		p {
 			backdrop-filter: var(--output-dimensions-backdrop, blur(5px));
-			background: var(--output-dimensions-background, #ffffffaa)
+			background: var(--output-dimensions-background, #ffffffaa);
 			font-family: var(--output-dimensions-font-family, var(--editor-font-family);
 			font-size: var(--output-dimensions-font-size, 12px);
 			font-variant-numeric: tabular-nums;
