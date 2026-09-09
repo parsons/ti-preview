@@ -103,9 +103,9 @@ export class TiPreview extends LitElement {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			margin: var(--editor-margin);
+			margin: var(--editor-outside-margin);
 			overflow: scroll;
-			padding: var(--editor-padding);
+			padding: var(--editor-outside-padding);
 			scrollbar-width: none;
 			width: 100%;
 

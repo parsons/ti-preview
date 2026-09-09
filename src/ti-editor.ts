@@ -29,6 +29,7 @@ export class TiEditor extends LitElement {
 
 				.cm-content {
 					font-family: var(--editor-font-family);
+					margin: var(--editor-margin);
 					padding: var(--editor-padding);
 					text-box: var(--editor-text-box);
 
