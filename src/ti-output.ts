@@ -19,6 +19,7 @@ export class TiOutput extends LitElement {
 			margin: var(--output-margin);
 			padding: var(--output-padding);
 			position: relative;
+			zoom: var(--output-zoom);
 		}
 
 		iframe {
@@ -27,6 +28,7 @@ export class TiOutput extends LitElement {
 			block-size: 100%;
 			display: block;
 			border: 0;
+			zoom: var(--output-iframe-zoom);
 		}
 
 		p {
@@ -96,7 +98,7 @@ export class TiOutput extends LitElement {
 
 	constructor() {
 		super();
-		this.ro.observe(this);
+		this.ro.observe(this.iframe);
 	}
 
 	private get sanitized() {
