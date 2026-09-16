@@ -29,6 +29,7 @@ export class TiOutput extends LitElement {
 			display: block;
 			border: 0;
 			zoom: var(--output-iframe-zoom);
+			max-width: var(--output-iframe-max-width);
 		}
 
 		p {
