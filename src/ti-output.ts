@@ -42,6 +42,7 @@ export class TiOutput extends LitElement {
 			box-shadow: var(--output-dimensions-box-shadow);
 			font-family: var(--output-dimensions-font-family, var(--editor-font-family));
 			font-size: var(--output-dimensions-font-size, 12px);
+			font-variation-settings: var(--output-dimensions-font-variation);
 			font-variant-numeric: tabular-nums;
 			inset: var(--output-dimensions-inset, auto auto 4px 4px);
 			margin: 0;

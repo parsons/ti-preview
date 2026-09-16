@@ -41,6 +41,7 @@ export class TiTabs extends LitElement {
 			color: var(--tab-bar-foreground);
 			font-family: var(--tab-bar-font-family);
 			font-size: var(--tab-bar-font-size);
+			font-variation-settings: var(--tab-bar-font-variation);
 			margin: 0;
 			padding: var(--tab-bar-padding);
 			position: relative;
