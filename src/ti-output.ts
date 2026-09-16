@@ -19,7 +19,6 @@ export class TiOutput extends LitElement {
 			margin: var(--output-margin);
 			padding: var(--output-padding);
 			position: relative;
-			zoom: var(--output-zoom);
 		}
 
 		iframe {
@@ -28,8 +27,7 @@ export class TiOutput extends LitElement {
 			block-size: 100%;
 			display: block;
 			border: 0;
-			zoom: var(--output-iframe-zoom);
-			max-width: var(--output-iframe-max-width);
+			zoom: var(--output-zoom);
 		}
 
 		p {
@@ -74,6 +72,11 @@ export class TiOutput extends LitElement {
 
 	private iframe = document.createElement("iframe");
 	private ro = new ResizeObserver((entries) => this.onResize(entries));
+	private hostRo = new ResizeObserver(() => {
+		if (this.contentsZoom) {
+			this.iframe.srcdoc = this.sanitized;
+		}
+	});
 
 	@state()
 	protected inlineSize = 0;
@@ -86,11 +89,16 @@ export class TiOutput extends LitElement {
 
 	private dimensionsTimeout: number | undefined;
 
+	private get contentsZoom() {
+		return getComputedStyle(this).getPropertyValue('--output-iframe-zoom').trim();
+	}
+
 	private onResize(entries: ResizeObserverEntry[]) {
 		const { blockSize, inlineSize } = entries[0].contentBoxSize[0];
+		const zoom = Number.parseFloat(this.contentsZoom) || 1;
 
-		this.inlineSize = Math.round(inlineSize);
-		this.blockSize = Math.round(blockSize);
+		this.inlineSize = Math.round(inlineSize / zoom);
+		this.blockSize = Math.round(blockSize / zoom);
 
 		this.dimensionsVisible = true;
 
@@ -101,6 +109,7 @@ export class TiOutput extends LitElement {
 	constructor() {
 		super();
 		this.ro.observe(this.iframe);
+		this.hostRo.observe(this);
 	}
 
 	private get sanitized() {
@@ -110,6 +119,10 @@ export class TiOutput extends LitElement {
 		if (this.base) {
 			sanitizedCode = sanitizedCode.replace(/url\((["'])(?!http)/g, `url($1${this.base}`);
 			sanitizedCode = sanitizedCode.replace('</head>', `<base href="${this.base}"></head>`);
+		}
+
+		if (this.contentsZoom) {
+			sanitizedCode = sanitizedCode.replace('</head>', `<style>:root { zoom: ${this.contentsZoom}; }</style></head>`);
 		}
 
 		return sanitizedCode;
