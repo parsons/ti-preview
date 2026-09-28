@@ -1,4 +1,4 @@
-import { sass as cssLang } from "@codemirror/lang-sass";
+import { css as cssLang } from "@codemirror/lang-css";
 import { html as htmlLang } from "@codemirror/lang-html";
 import { javascript as jsLang } from '@codemirror/lang-javascript';
 import { syntaxHighlighting, indentUnit } from "@codemirror/language";

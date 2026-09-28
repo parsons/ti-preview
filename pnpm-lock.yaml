@@ -8,15 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@codemirror/lang-css':
+        specifier: 6.3.1
+        version: 6.3.1(@codemirror/view@6.38.4)
       '@codemirror/lang-html':
         specifier: 6.4.11
         version: 6.4.11
       '@codemirror/lang-javascript':
         specifier: 6.2.4
         version: 6.2.4
-      '@codemirror/lang-sass':
-        specifier: 6.0.2
-        version: 6.0.2(@codemirror/view@6.38.4)
       '@codemirror/language':
         specifier: 6.11.3
         version: 6.11.3
@@ -687,9 +687,6 @@ packages:
   '@codemirror/lang-javascript@6.2.4':
     resolution: {integrity: sha512-0WVmhp1QOqZ4Rt6GlVGwKJN3KW7Xh4H2q8ZZNGZaP6lRdxXJzmjm4FqvmOojVj6khWJHIb9sp7U/72W7xQgqAA==}
 
-  '@codemirror/lang-sass@6.0.2':
-    resolution: {integrity: sha512-l/bdzIABvnTo1nzdY6U+kPAC51czYQcOErfzQ9zSm9D8GmNPD0WTW8st/CJwBTPLO8jlrbyvlSEcN20dc4iL0Q==}
-
   '@codemirror/language@6.11.3':
     resolution: {integrity: sha512-9HBM2XnwDj7fnu0551HkGdrUrrqmYq/WC5iv6nbY2WdicXdGbhR/gfbZOH73Aqj4351alY1+aoG9rCNfiwS1RA==}
 
@@ -762,9 +759,6 @@ packages:
 
   '@lezer/lr@1.4.2':
     resolution: {integrity: sha512-pu0K1jCIdnQ12aWNaAVU5bzi7Bd1w54J3ECgANPmYLtQKP0HBj2cE/5coBD66MT10xbtIuUr7tg0Shbsvk0mDA==}
-
-  '@lezer/sass@1.1.0':
-    resolution: {integrity: sha512-3mMGdCTUZ/84ArHOuXWQr37pnf7f+Nw9ycPUeKX+wu19b7pSMcZGLbaXwvD2APMBDOGxPmpK/O6S1v1EvLoqgQ==}
 
   '@lit-labs/ssr-dom-shim@1.4.0':
     resolution: {integrity: sha512-ficsEARKnmmW5njugNYKipTm4SFnbik7CXtoencDZzmzo/dQ+2Q0bgkzJuoJP20Aj0F+izzJjOqsnkd6F/o1bw==}
@@ -3050,16 +3044,6 @@ snapshots:
       '@lezer/common': 1.2.1
       '@lezer/javascript': 1.4.17
 
-  '@codemirror/lang-sass@6.0.2(@codemirror/view@6.38.4)':
-    dependencies:
-      '@codemirror/lang-css': 6.3.1(@codemirror/view@6.38.4)
-      '@codemirror/language': 6.11.3
-      '@codemirror/state': 6.5.2
-      '@lezer/common': 1.2.1
-      '@lezer/sass': 1.1.0
-    transitivePeerDependencies:
-      - '@codemirror/view'
-
   '@codemirror/language@6.11.3':
     dependencies:
       '@codemirror/state': 6.5.2
@@ -3176,12 +3160,6 @@ snapshots:
   '@lezer/lr@1.4.2':
     dependencies:
       '@lezer/common': 1.2.1
-
-  '@lezer/sass@1.1.0':
-    dependencies:
-      '@lezer/common': 1.2.1
-      '@lezer/highlight': 1.2.1
-      '@lezer/lr': 1.4.2
 
   '@lit-labs/ssr-dom-shim@1.4.0': {}
 

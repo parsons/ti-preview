@@ -13,7 +13,7 @@ export default defineConfig({
 			lit: ["lit"],
 			codemirror: [
 				"codemirror",
-				"@codemirror/lang-sass",
+				"@codemirror/lang-css",
 				"@codemirror/lang-html",
 				"@codemirror/lang-javascript",
 				"@codemirror/language",

@@ -1,6 +1,6 @@
 {
 	"name": "@parsons/ti-preview",
-	"version": "0.0.44",
+	"version": "0.0.45",
 	"description": "Mini HTML/CSS editor / preview for the Typography & Interaction class at Parsons",
 	"author": "Rijk van Zanten <rijkvanzanten@me.com>",
 	"license": "MIT",
@@ -38,7 +38,7 @@
 	"dependencies": {
 		"@codemirror/lang-html": "6.4.11",
 		"@codemirror/lang-javascript": "6.2.4",
-		"@codemirror/lang-sass": "6.0.2",
+		"@codemirror/lang-css": "6.3.1",
 		"@codemirror/language": "6.11.3",
 		"@codemirror/state": "6.5.2",
 		"@codemirror/theme-one-dark": "6.1.3",
