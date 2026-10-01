@@ -73,10 +73,13 @@ export class TiOutput extends LitElement {
 	private iframe = document.createElement("iframe");
 	private ro = new ResizeObserver((entries) => this.onResize(entries));
 	private hostRo = new ResizeObserver(() => {
-		if (this.contentsZoom) {
+		const zoom = this.contentsZoom;
+		if (zoom !== this.lastContentsZoom) {
+			this.lastContentsZoom = zoom;
 			this.iframe.srcdoc = this.sanitized;
 		}
 	});
+	private lastContentsZoom = "";
 
 	@state()
 	protected inlineSize = 0;
@@ -129,7 +132,8 @@ export class TiOutput extends LitElement {
 	}
 
 	override update(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>) {
-		if (this.code !== changedProperties.get("code")) {
+		if (changedProperties.has("code") || !this.iframe.hasAttribute("srcdoc")) {
+			this.lastContentsZoom = this.contentsZoom;
 			this.iframe.srcdoc = this.sanitized;
 		}
 
